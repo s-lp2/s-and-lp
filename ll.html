@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&LP - Study and Learning Point</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: white; color: #003366; }
+        header { background: #003366; color: white; padding: 15px; text-align: center; }
+        nav { text-align: center; margin: 15px 0; }
+        nav a { margin: 0 15px; text-decoration: none; color: #003366; font-weight: bold; }
+        section { padding: 20px; text-align: center; }
+        .contact-form { max-width: 400px; margin: auto; }
+        input, textarea { width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #003366; }
+        button { background: #003366; color: white; border: none; padding: 10px; cursor: pointer; }
+        footer { background: #f1f1f1; text-align: center; padding: 10px; margin-top: 20px; }
+        .gallery img { width: 100%; max-width: 500px; display: none; }
+        .testimonial { background: #e0e0e0; padding: 15px; margin: 10px; border-radius: 5px; }
+    </style>
+    <script>
+        let index = 0;
+        function showSlides() {
+            let slides = document.querySelectorAll('.gallery img');
+            slides.forEach(slide => slide.style.display = 'none');
+            if (slides.length > 0) {
+                slides[index].style.display = 'block';
+                index = (index + 1) % slides.length;
+            }
+            setTimeout(showSlides, 3000);
+        }
+        window.onload = showSlides;
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="S&LP Logo" width="100">
+        <h1>Study and Learning Point</h1>
+        <p>1st to 10th Classes - All Subjects</p>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Providing quality education for students from Grade 1 to 10.</p>
+    </section>
+    <section id="subjects">
+        <h2>Our Subjects</h2>
+        <p>We offer Mathematics, Science, Social Studies, English, Hindi, Sanskrit, Information Practices, and Computer Application.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: 8860359372, 7834837446</p>
+        <p>Address: F-8/8, Krishna Nagar, Delhi (Near L.P.S School)</p>
+        <a href="https://maps.app.goo.gl/n5BqeNKVrwmQhTwB8" target="_blank">View on Google Maps</a>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Class">
+            <input type="tel" placeholder="Your Contact No.">
+            <textarea placeholder="Additional Info"></textarea>
+            <button>Submit</button>
+        </div>
+    </section>
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <img src="gallery1.jpg" alt="Institute Image 1">
+        <img src="gallery2.jpg" alt="Institute Image 2">
+        <img src="gallery3.jpg" alt="Institute Image 3">
+        <img src="gallery4.jpg" alt="Institute Image 4">
+        <img src="gallery5.jpg" alt="Institute Image 5">
+        <img src="gallery6.jpg" alt="Institute Image 6">
+        <img src="gallery7.jpg" alt="Institute Image 7">
+        <img src="gallery8.jpg" alt="Institute Image 8">
+    </section>
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p><strong>Parth Nahata:</strong> I scored above 90% in Maths and English, thanks to S&LP!</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Gungun Jain:</strong> I achieved 95%+ in English, all because of their amazing teaching!</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Krish Jain:</strong> I got 100% in English, Maths, Science, and S.S.T! Best institute ever!</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Lavya Dang:</strong> I scored 100% in English! Highly recommend S&LP for tuition.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 S&LP - Study and Learning Point. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
